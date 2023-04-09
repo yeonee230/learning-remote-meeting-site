@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title itaki
+        link(rel="stylesheet", href="https://unpkg.com/mvp.css")
+    body(style='display:inline; ')      
+        header 
+            h1.logo 로그인  
+        
+        main(style='display: flex; justify-content: center;')  
+            form
+                input#id(type='text' placeholder='ID')
+                input#password(type='password' placeholder='Password')
+                input#button(type='button', value='login')
+        script(src="/public/js/login.js" ) 

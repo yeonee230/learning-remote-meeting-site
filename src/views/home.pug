@@ -1,0 +1,52 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title zoom 
+        //link(rel="stylesheet", href="https://unpkg.com/mvp.css")
+        link(rel="stylesheet", href="../public/css/style.css")
+    body 
+        
+        main
+            #welcome 
+                form
+                    input(placeholder = "방 이름을 입력하세요.",required, type="text")
+                    button 방 입장하기 
+            #call            
+                div#myStream
+                    video#myFace(autoplay,playsinline, muted, width="400", height="400")
+                    button#mute 소리 끄기
+                    button#camera 카메라 끄기
+                    select#cameras
+                    video#peerFace(autoplay,playsinline, muted, width="400", height="400")
+                //- div#othersStream
+        script(src="/socket.io/socket.io.js") 
+        script(src="/public/js/app.js" )  
+    
+
+
+
+//-.main_container
+        //-     .dashboard_container
+        //-         div#welcome 
+        //-             form
+        //-                 input(placeholder="room name", required, type="text")
+        //-                 button Enter Room
+        //-         div#room
+        //-             h3
+        //-             ul
+        //-             form
+        //-                 input(placeholder="message", required, type="text")
+        //-                 button Send
+
+        //-     .call_container
+        //-         .videos_container
+        //-             .local_video_container
+        //-                 video.local_video#localVideo(autoplay, muted, playsinline)
+
+        //-             video.remote_video#remoteVideo(autoplay, playsinline)
+        //-         .videos_placeholder
+                    
+        //-     .messenger_container
